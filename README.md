@@ -135,15 +135,21 @@ For ASIC design we require
 
 1. Synthesis: The RTL code is synthesized to generate a gate-level netlist using synthesis tools such as Cadence Genus, Synopsys Design Compiler, or similar tools. The gate-level netlist represents the design using logical gates, flip-flops, and other standard cells.
 
-![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b69b48da-4b80-451a-8b2d-d7470b522de1)
+2. 2. Floorplanning: Create a physical floorplan for your design, which defines the placement of different modules and cells on the silicon die. Proper floorplanning can significantly impact the ASIC's performance, power consumption, and manufacturability.
 
-2. Floorplanning: Create a physical floorplan for your design, which defines the placement of different modules and cells on the silicon die. Proper floorplanning can significantly impact the ASIC's performance, power consumption, and manufacturability.
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b69b48da-4b80-451a-8b2d-d7470b522de1)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/a8ff07b6-b657-4a88-b650-ac83654c7255)
 
+3. Placement: Based on the floorplan, use a place-and-route tool (e.g., Cadence Innovus, Synopsys ICC) to place the standard cells and modules on the chip's layout. This step also involves optimizing the placement for factors like power and signal integrity.
+
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e2bed2d2-389c-4e23-b45e-983fab17b5c4)
 
+4. Clock Tree Synthesis (CTS): Design and implement the clock distribution network to ensure proper clocking of the ASIC. Clock tree synthesis tools like Cadence Innovus or Synopsys IC Compiler can be used for this purpose.
+
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/29d3e2f4-e1bd-4cf6-851a-dec4f5c7fb9a)
+
+5. Routing: After placement, the routing phase involves connecting the placed cells and modules with metal traces to establish the desired interconnections. The routing tool generates the detailed layout of the chip.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/08145132-edf3-4b41-a3a1-54c98ab2bf44)
 
