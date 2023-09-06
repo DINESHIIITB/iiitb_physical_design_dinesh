@@ -91,6 +91,8 @@ Execution on Hardware: Run the program on the target hardware. The hardware's CP
 
 </details>
 
+<details>
+ <summary> ASIC Design </summary>
 
 ### ASIC Designs
 
@@ -122,6 +124,8 @@ For ASIC design we require
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/6312baa3-4225-4c02-810d-af8f313de0f0)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/d56920d8-aa12-4a39-b85c-fb2677f563f3)
+
+</details>
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/9c724efe-34a6-4e24-b818-8297a0e4eb3e)
 
