@@ -10,7 +10,7 @@
 ## Day 0
 
 <details>
- <summary> Summary </summary>
+ <summary> Installing the necessary tools </summary>
 
 
 ### **OpenSTA**
@@ -27,12 +27,6 @@ make
 ```
 Below is the screenshot showing sucessful installation:
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7ca9dc6e-e1b7-4d38-bcd9-60796a902546)
-
-</details>
- <details>
- <summary> magic </summary>
-
-
 
 
 ### **Openlane**
@@ -74,21 +68,31 @@ make test
 </details>
 
 
-
-  
-package
-
-![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/45a31206-5064-4d88-af79-a209c479dc49)
+<details>
+ <summary> Reduced Instruction Set Computer (RISC) </summary>
 
 
-![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/53eb3371-4fe8-49be-b75d-a34536d7376b)
+Reduced Instruction Set Computer (RISC)
 
-![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f9abdd79-ee71-46e6-bf75-0b25dd36971b)
+RISC-V is an open-source instruction set architecture (ISA).An instruction set architecture defines the set of instructions a processor can execute. RISC-V offers multiple base instruction sets (RV32I, RV64I, etc.) and optional standard extensions (e.g., M for integer multiplication/division, F for single-precision floating-point, D for double-precision floating-point, and more). This modularity allows designers to tailor the architecture to their specific needs.
+
+Compilation: Use a C compiler (e.g., GCC, Clang) to compile the C source code into assembly code. The compiler translates the high-level C code into low-level assembly code that the hardware can understand.
+
+Assembly: Assemble the generated assembly code using an assembler (e.g., GNU Assembler - GAS). The assembler converts the assembly code into machine code, which consists of binary instructions that the hardware can directly execute. The type of instructions depend on what type of hardware it is, if it is risc v then the instructions are also risc v.
+
+Loading: Load the generated executable binary onto the target hardware. This can involve transferring the binary to a microcontroller, FPGA, or other hardware platform via appropriate interfaces (e.g., JTAG, USB, SD card).
+
+Execution on Hardware: Run the program on the target hardware. The hardware's CPU fetches and executes the machine code instructions, carrying out the logic specified in the C source code.
+
+
+
 
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f3d963b3-c93e-4e94-9d33-a852e837ab47)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/c08f0252-fc86-4b41-868f-327212a3da2b)
+
+</details>
 
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/2c65706f-9725-4e2f-a8e9-0f3c0d518992)
