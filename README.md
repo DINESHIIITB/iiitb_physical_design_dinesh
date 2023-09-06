@@ -72,7 +72,7 @@ make test
  <summary> Reduced Instruction Set Computer (RISC) </summary>
 
 
-Reduced Instruction Set Computer (RISC)
+### Reduced Instruction Set Computer (RISC)
 
 RISC-V is an open-source instruction set architecture (ISA).An instruction set architecture defines the set of instructions a processor can execute. RISC-V offers multiple base instruction sets (RV32I, RV64I, etc.) and optional standard extensions (e.g., M for integer multiplication/division, F for single-precision floating-point, D for double-precision floating-point, and more). This modularity allows designers to tailor the architecture to their specific needs.
 
@@ -85,9 +85,6 @@ Loading: Load the generated executable binary onto the target hardware. This can
 Execution on Hardware: Run the program on the target hardware. The hardware's CPU fetches and executes the machine code instructions, carrying out the logic specified in the C source code.
 
 
-
-
-
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f3d963b3-c93e-4e94-9d33-a852e837ab47)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/c08f0252-fc86-4b41-868f-327212a3da2b)
@@ -95,7 +92,31 @@ Execution on Hardware: Run the program on the target hardware. The hardware's CP
 </details>
 
 
-![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/2c65706f-9725-4e2f-a8e9-0f3c0d518992)
+### ASIC Designs
+
+For ASIC design we require 
+
+ 1. EDA Tools : EDA tools are essential for ASIC design. These tools assist in various stages of the design process, including RTL design, simulation, synthesis, physical design, and verification. Some commonly used EDA tools include:
+    * RTL Design Tools: Such as Cadence Encounter, Synopsys Design Compiler, or Xilinx Vivado for writing and simulating RTL code.
+    * Simulation Tools: Tools like Cadence SimVision, Synopsys VCS, or ModelSim for simulating the ASIC's behavior before fabrication.
+    * Synthesis Tools: Used to convert RTL code into gate-level netlists. Synopsys DC (Design Compiler) and Cadence Genus are examples.
+    * Physical Design Tools: This includes Cadence Innovus, Synopsys IC Compiler, or Mentor Graphics Calibre for physical layout and optimization.
+    * Verification Tools: Tools like Cadence Incisive, Synopsys VCS, or formal verification tools like Cadence JasperGold are used for verifying the design's correctness.
+   
+      * OPen EDA tools:
+        1. QFLow
+        2. OPenroad
+        3. OPenlane
+
+ 2. Process Design Kits (PDKs): PDKs are essential sets of files and data provided by semiconductor foundries. They contain information about the manufacturing process, including transistor models, design rules, and technology files. ASIC designers use PDKs to ensure their designs are compatible with the foundry's manufacturing process.
+      * SKY water 130nm PDK
+      * ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/9eff7965-168b-43d3-83ef-84a7f6d20f2a)
+
+ 3. RTL (Register-Transfer Level) Design: RTL design is a critical aspect of ASIC design. You'll need to write RTL code using hardware description languages (HDLs) like VHDL or Verilog.
+    * Sorces for RTL Design:
+       * Librecores.org
+       * OPencores.org
+       * githhub
 
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/6312baa3-4225-4c02-810d-af8f313de0f0)
