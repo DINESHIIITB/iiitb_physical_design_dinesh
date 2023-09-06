@@ -135,7 +135,7 @@ For ASIC design we require
 
 1. Synthesis: The RTL code is synthesized to generate a gate-level netlist using synthesis tools such as Cadence Genus, Synopsys Design Compiler, or similar tools. The gate-level netlist represents the design using logical gates, flip-flops, and other standard cells.
 
-2. 2. Floorplanning: Create a physical floorplan for your design, which defines the placement of different modules and cells on the silicon die. Proper floorplanning can significantly impact the ASIC's performance, power consumption, and manufacturability.
+2. Floorplanning: Create a physical floorplan for your design, which defines the placement of different modules and cells on the silicon die. Proper floorplanning can significantly impact the ASIC's performance, power consumption, and manufacturability.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b69b48da-4b80-451a-8b2d-d7470b522de1)
 
@@ -153,11 +153,13 @@ For ASIC design we require
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/08145132-edf3-4b41-a3a1-54c98ab2bf44)
 
-
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/85e26eab-e126-4d17-aeed-17ed65cbe596)
 
 
-signoff
+6. Signoff:
+   * Physical Verification: Perform various physical verification checks to ensure that the layout adheres to the design rules and manufacturing constraints. These checks include DRC (Design Rule Checking) and LVS (Layout vs. Schematic) checks.
+   * Extraction: Extract parasitic information from the layout, which is used in subsequent steps for more accurate timing analysis.
+   * Final Timing Closure: Re-run static timing analysis (STA) to ensure that the design still meets the required timing constraints, considering the parasitics from the extraction step. Iterate on placement and routing if necessary.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/54272ca3-7de1-4a92-9310-10730a8dd5c9)
 
