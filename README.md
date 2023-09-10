@@ -176,6 +176,15 @@ For ASIC design we require
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/bc21f175-2dc9-4e53-be3e-9598fd27c7f3)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/399fb969-d135-4a94-b443-dd6bfe8ee563)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/7dbff85b-b474-4933-a47e-f5bb179210c4)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/1dfd2c20-95fc-4494-881a-53fb554639e2)
+
+
+
+
 
 
 
