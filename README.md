@@ -195,6 +195,11 @@ ls -ltr ---> lists in chronological order
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/36ed8cb9-002d-4937-b85a-11fdcc20b63a)
 
 
+./flow.tcl ---> command says how the flow has to go
+
+```
+./flow.tcl -interactive
+package require openlane 0.9
 
 
 
