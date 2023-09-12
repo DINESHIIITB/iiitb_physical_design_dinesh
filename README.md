@@ -199,7 +199,6 @@ ls -ltr ---> lists in chronological order
 
 ./flow.tcl ---> command says how the flow has to go
 
-```
 ./flow.tcl -interactive
 package require openlane 0.9
 
