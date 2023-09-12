@@ -5,6 +5,8 @@
 
 [Day 0](#day-0)
 
+[Day 1](#day-1)
+
 # week_0
 
 ## Day 0
@@ -200,6 +202,25 @@ ls -ltr ---> lists in chronological order
 ```
 ./flow.tcl -interactive
 package require openlane 0.9
+
+## Day 1
+Good floorplan Bad floorplan and Introduction to library cells 
+<details>
+ <summary> Chip floor planning considerations </summary>
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/9e132084-0c38-47fc-a208-6490c53bbf6a)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b80fc877-078e-4bc4-8439-ec0dcaf5a686)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/0d22263a-e2e5-4131-a447-3a6e6582c913)
+
+utilization factor
+
+</details>
+
+
+
 
 
 
