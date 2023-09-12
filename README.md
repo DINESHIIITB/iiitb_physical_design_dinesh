@@ -220,16 +220,11 @@ Die : A Die which consists  core is small specimen material specimen on which th
 
                         
  Utilization factor =    ( Area occupied by netlist)/ (Total area of the core)
-                        
-
-                    
+                                           
  Aspect ratio =  Height/Width
-                     
-
-                     
+                                          
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/0d22263a-e2e5-4131-a447-3a6e6582c913)
 
-utilization factor
 
 </details>
 
