@@ -214,6 +214,7 @@ Netlist : A Netlist describes the connectivity of elcetronic design
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/9e132084-0c38-47fc-a208-6490c53bbf6a)
 
 Core : A Core is the section of the chip where the fundamental logic of the design is placed
+
 Die : A Die which consists  core is small specimen material specimen on which the fundamentals circuit is fabricated.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b80fc877-078e-4bc4-8439-ec0dcaf5a686)
