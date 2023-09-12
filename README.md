@@ -218,13 +218,13 @@ Die : A Die which consists  core is small specimen material specimen on which th
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b80fc877-078e-4bc4-8439-ec0dcaf5a686)
 
-                         Area occupied by netlist
- Utilization factor =    ------------------------
-                         Total area of the core
+                        
+ Utilization factor =    ( Area occupied by netlist)/ (Total area of the core)
+                        
 
-                     Height
- Aspect ratio = -----------------
-                     Width
+                    
+ Aspect ratio =  Height/Width
+                     
 
                      
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/0d22263a-e2e5-4131-a447-3a6e6582c913)
