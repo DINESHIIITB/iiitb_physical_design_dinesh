@@ -180,7 +180,7 @@ For ASIC design we require
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/bc21f175-2dc9-4e53-be3e-9598fd27c7f3)
 
-<details>
+</details>
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/399fb969-d135-4a94-b443-dd6bfe8ee563)
 
