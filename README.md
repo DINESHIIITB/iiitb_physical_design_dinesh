@@ -193,8 +193,10 @@ ls -ltr ---> lists in chronological order
 cd openlane
 make mount
 ./flow.tcl -interactive
-
+package require openlane 0.9
+prep -design picorv32a
 ```
+
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f14f6292-ba06-4468-b4cb-74236299b737)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/7ee2709c-38dd-4c57-9f82-0820fdf43a91)
