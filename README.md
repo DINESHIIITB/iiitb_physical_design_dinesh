@@ -166,9 +166,11 @@ For ASIC design we require
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/54272ca3-7de1-4a92-9310-10730a8dd5c9)
 
 
-
 </details>
 
+
+<details>
+ <summary> Openlane tools </summary>
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/2f510c9b-197d-47da-bf38-2165e34622e5)
 
@@ -177,6 +179,8 @@ For ASIC design we require
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/1f05a13d-c3cb-490a-9129-b14779933fbc)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/bc21f175-2dc9-4e53-be3e-9598fd27c7f3)
+
+<details>
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/399fb969-d135-4a94-b443-dd6bfe8ee563)
 
