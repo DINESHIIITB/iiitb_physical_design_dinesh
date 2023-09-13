@@ -226,6 +226,34 @@ Die : A Die which consists  core is small specimen material specimen on which th
                                           
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/0d22263a-e2e5-4131-a447-3a6e6582c913)
 
+THe combinational logic can be divideed into two blocks with inputs and outputs and these blocks can be reused seperately or opgether whenver we want
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b84ee19c-f57a-4835-81c6-056417c59392)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/65afe218-3477-4994-9179-241ef37f9654)
+
+
+Because of large distance between power and circuit the volatge at the circuit may enter undefind regions so to solve these problem we added decoupling capacitor parrallel to the circuit  to charge the circuit.
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/624a8570-03ac-48d6-9b68-4b3a4594584b)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/818e86a1-d8e2-44dc-96ee-412fd0e515a9)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/1da93907-ba9f-4b5d-bdf6-5619815c97bc)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/955e3157-711c-451d-8bdc-f88ec866aad6)
+
+Power has supplied from multiple points to solve this problem.
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e5d45acc-6b27-4568-8716-0d916d18eeff)
+
+
+
+
+
+
 
 </details>
 
