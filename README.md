@@ -187,7 +187,14 @@ For ASIC design we require
 Labwork
 
 ls -ltr ---> lists in chronological order
+./flow.tcl ---> command says how the flow has to go
 
+```
+cd openlane
+make mount
+./flow.tcl -interactive
+
+```
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f14f6292-ba06-4468-b4cb-74236299b737)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/7ee2709c-38dd-4c57-9f82-0820fdf43a91)
@@ -197,10 +204,7 @@ ls -ltr ---> lists in chronological order
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/36ed8cb9-002d-4937-b85a-11fdcc20b63a)
 
 
-./flow.tcl ---> command says how the flow has to go
 
-./flow.tcl -interactive
-package require openlane 0.9
 
 ## Day 1
 
@@ -240,6 +244,7 @@ Because of large distance between power and circuit the volatge at the circuit m
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/818e86a1-d8e2-44dc-96ee-412fd0e515a9)
 
+4.) Power Planning :
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/1da93907-ba9f-4b5d-bdf6-5619815c97bc)
 
@@ -248,6 +253,11 @@ Because of large distance between power and circuit the volatge at the circuit m
 Power has supplied from multiple points to solve this problem.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e5d45acc-6b27-4568-8716-0d916d18eeff)
+
+5.) Pin Placement :
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b72a824e-86dd-4c0b-bd83-67cdf9e0c746)
+
 
 
 
