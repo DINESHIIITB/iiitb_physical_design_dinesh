@@ -229,10 +229,11 @@ Die : A Die which consists  core is small specimen material specimen on which th
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b80fc877-078e-4bc4-8439-ec0dcaf5a686)
 
-                        
+ ```                       
  Utilization factor =    ( Area occupied by netlist)/ (Total area of the core)
                                            
  Aspect ratio =  Height/Width
+```
                                           
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/0d22263a-e2e5-4131-a447-3a6e6582c913)
 
@@ -240,7 +241,10 @@ THe combinational logic can be divideed into two blocks with inputs and outputs 
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b84ee19c-f57a-4835-81c6-056417c59392)
 
+3. Pre placed cells :
 
+       Preplaced cells in integrated circuit (IC) design are static, preconfigured logic or functional units that are strategically positioned within the IC layout. Design engineers manually place these cells at precise locations on the chip's layout canvas. Importantly, these preplaced cells retain their fixed positions throughout subsequent stages of the IC design process, including placement and routing. Typically, these cells house intricate logic or specialized functional blocks that are essential to the chip's overall functionality. Examples of preplaced cells encompass memory modules, customized processors, analog circuitry, specialized accelerators, or licensed Intellectual Property (IP) components.
+   
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/65afe218-3477-4994-9179-241ef37f9654)
 
 
