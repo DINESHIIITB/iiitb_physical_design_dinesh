@@ -297,6 +297,12 @@ Library contains following information:
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f8d8a911-7c98-49b7-9c71-51f524bbf893)
 
 
+</details>
+
+
+
+<details>
+ <summary> Cell design and characterization follows </summary>
 
 
 
@@ -306,12 +312,27 @@ Library contains following information:
 
 
 
+<details>
+ <summary> General timing characterization parameters </summary>
 
 
 
 
 
+</details>
 
+### Day 3
+
+### Design library cell using magic layout and ngspice characterization 
+
+<details>
+ <summary> Labs for CMOS inverter ngspice simulations </summary>
+
+
+
+
+
+</details>
 
 
 
