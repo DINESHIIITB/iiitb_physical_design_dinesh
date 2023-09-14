@@ -180,7 +180,7 @@ For ASIC design we require
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/bc21f175-2dc9-4e53-be3e-9598fd27c7f3)
 
-</details>
+
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/399fb969-d135-4a94-b443-dd6bfe8ee563)
 
@@ -209,7 +209,7 @@ prep -design picorv32a
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/36ed8cb9-002d-4937-b85a-11fdcc20b63a)
 
-
+</details>
 
 
 ## Day 1
@@ -241,9 +241,7 @@ THe combinational logic can be divideed into two blocks with inputs and outputs 
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b84ee19c-f57a-4835-81c6-056417c59392)
 
-3. Pre placed cells :
-
-       Preplaced cells in integrated circuit (IC) design are static, preconfigured logic or functional units that are strategically positioned within the IC layout. Design engineers manually place these cells at precise locations on the chip's layout canvas. Importantly, these preplaced cells retain their fixed positions throughout subsequent stages of the IC design process, including placement and routing. Typically, these cells house intricate logic or specialized functional blocks that are essential to the chip's overall functionality. Examples of preplaced cells encompass memory modules, customized processors, analog circuitry, specialized accelerators, or licensed Intellectual Property (IP) components.
+3. Pre placed cells :   Preplaced cells in integrated circuit (IC) design are static, preconfigured logic or functional units that are strategically positioned within the IC layout. Design engineers manually place these cells at precise locations on the chip's layout canvas. Importantly, these preplaced cells retain their fixed positions throughout subsequent stages of the IC design process, including placement and routing. Typically, these cells house intricate logic or specialized functional blocks that are essential to the chip's overall functionality. Examples of preplaced cells encompass memory modules, customized processors, analog circuitry, specialized accelerators, or licensed Intellectual Property (IP) components.
    
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/65afe218-3477-4994-9179-241ef37f9654)
 
