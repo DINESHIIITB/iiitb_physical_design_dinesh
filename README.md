@@ -274,6 +274,27 @@ run_floorplan
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/8285c7d2-ca7c-4cb9-a2c0-1f6caa2b980d)
 
+</details>
+
+
+
+<details>
+ <summary> Library binding and placement </summary>
+
+
+Library contains following information:
+1. Width and height of cells
+2. the required conditon of particular cell
+3. Delay information of cells
+4. various sizes of same cells
+ ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b5c997d7-386f-4581-9aa7-0f2cf2dca2b0)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/48e22baa-d19f-4506-9fa2-299804fe587b)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/3e7d6d15-b14a-4104-a6ed-9e51d0adb308)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f8d8a911-7c98-49b7-9c71-51f524bbf893)
 
 
 
@@ -282,14 +303,6 @@ run_floorplan
 
 
 </details>
-
-
-
-
-
-
-
-
 
 
 
