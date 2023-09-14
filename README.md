@@ -262,9 +262,17 @@ Power has supplied from multiple points to solve this problem.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e5d45acc-6b27-4568-8716-0d916d18eeff)
 
-5.) Pin Placement :
+5.) Pin Placement : Pin placement, also referred to as I/O (Input/Output) planning or pin assignment, stands as a pivotal facet of integrated circuit (IC) design. It encompasses the meticulous determination of where and how to assign pins or external connections on the chip package. The significance of precise pin placement resonates across functionality, manufacturability, and overall performance. Through judicious pin arrangement, the integrity of signals can be maintained, averting signal degradation and ensuring the accuracy of data transmission. Prudent pin placement can also play a role in managing thermal aspects within the device. By strategically positioning power and ground pins, effective heat dissipation can be achieved. A well-considered approach to pin placement contributes to the reliability of the electronic system, diminishing the risks associated with signal issues, overheating, and manufacturing discrepancies.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b72a824e-86dd-4c0b-bd83-67cdf9e0c746)
+
+run_floorplan
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b031b72f-66df-4df9-afce-49374b0be1be)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/17626251-9e92-4d1f-a5f7-96af025e5f60)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/8285c7d2-ca7c-4cb9-a2c0-1f6caa2b980d)
 
 
 
