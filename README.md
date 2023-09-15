@@ -329,11 +329,19 @@ Library contains following information:
  <summary> Labs for CMOS inverter ngspice simulations </summary>
 
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/05fd9056-5879-4643-ae8e-2104f5b15f20)
 
 
 
 </details>
 
+<details>
+ <summary> Inception of Layout and CMOS Fabrication Process </summary>
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/ec6dada8-066b-4c6a-b1fe-54d22897477c)
+
+
+</details>
 
 
 
