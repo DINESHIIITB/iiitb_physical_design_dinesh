@@ -366,6 +366,8 @@ For standard cell characterization, we recommend utilizing the open-source softw
 <details>
  <summary> General timing characterization parameters </summary>
 
+ ## Timing threshold Definitions
+
   1. slew_low_rise_thr: This is the threshold at which the rising signal (transition from low to high) reaches 20% of its full value.
   
   2. slew_high_rise_thr: This is the threshold at which the rising signal reaches 80% of its full value.
@@ -388,9 +390,9 @@ Propagation delay is the time it takes for a change in an input signal to propag
 
 Mathematically, propagation delay can be expressed as:
 
-* Propagation Delay = time(out_fall_thr) - time(in_rise_thr)
-* time(out_fall_thr) is the time when the output signal reaches 50% of its final value during its falling transition.
-*  time(in_rise_thr) is the time when the input signal reaches 50% of its final value during its rising transition.
+ Propagation Delay = time(out_fall_thr) - time(in_rise_thr)
+          * time(out_fall_thr) is the time when the output signal reaches 50% of its final value during its falling transition.
+          *  time(in_rise_thr) is the time when the input signal reaches 50% of its final value during its rising transition.
 
 * Transition Time:
 
@@ -402,8 +404,8 @@ There are two types of transition times:
     Fall transition time measures the duration it takes for a signal to transition from a high voltage level to a low voltage level. It can be calculated as:
 Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
 
-    * time(slew_high_fall_thr) is the time when the falling signal reaches 80% of its final value.
-    * time(slew_low_fall_thr) is the time when the falling signal reaches 20% of its final value.
+     * time(slew_high_fall_thr) is the time when the falling signal reaches 80% of its final value.
+     * time(slew_low_fall_thr) is the time when the falling signal reaches 20% of its final value.
 
 2. Rise Transition Time:
 Rise transition time measures the duration it takes for a signal to transition from a low voltage level to a high voltage level. It can be calculated as:
@@ -461,6 +463,39 @@ Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
 
 ### Day 4
 
+
+<details>
+ <summary> CMOS Inverter NGSpice Simulations  </summary>
+
+
+In this section, we will outline the process of creating a SPICE deck and conducting simulations for a CMOS inverter using NGSpice. The CMOS inverter consists of complementary metal-oxide-semiconductor (CMOS) components, including both p-type (PMOS) and n-type (NMOS) transistors.
+
+SPICE Deck Creation and Simulation for CMOS Inverter:
+
+    SPICE Deck: A SPICE deck refers to the component connectivity, essentially a netlist, for the CMOS inverter. It defines how components are connected within the circuit.
+
+    SPICE Deck Values: Specify the values for key parameters, such as W/L (Width/Length). For example, "0.375u/0.25u" indicates that the width is 375 nanometers, and the length is 250 nanometers. It's essential to note that PMOS transistors should have a wider width compared to NMOS transistors, often 2x or 3x wider. Gate and supply voltages are typically multiples of the length; for instance, the gate voltage might be set at 2.5 volts.
+
+    Add Nodes: Surround each component in your circuit with nodes and assign unique names to these nodes. These node names are used in the SPICE netlist to identify and connect components properly.
+
+Additional Notes:
+
+    Width vs. Length: In CMOS technology, "width" refers to the length of the source and drain regions, while "length" denotes the distance between the source and drain. These parameters significantly impact the performance of transistors.
+
+    PMOS and NMOS Sizing: PMOS transistors typically have slower carrier mobility (holes) compared to NMOS transistors (electrons). To achieve balanced rise and fall times in your CMOS inverter, the PMOS transistor should have a larger width, reducing its resistance and increasing mobility.
+
+   * SPICE Deck netlsit description
+     
+ ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/87fad89f-75dc-4c0e-a44d-696ac694855e)
+
+***syntax for PMOS and NMOS desription***
+[component name] [drain] [gate] [source] [substrate] [transistor type] W=[width] L=[length]
+
+ ***simulation commands***
+.op --- is the start of SPICE simulation operation where Vin will be sweep from 0 to 2.5 with 0.5 steps
+tsmc_025um_model.mod  ----  model file containing the technological parameters for the 0.25um NMOS and PMOS 
+    
+</details>
 
 <details>
  <summary> Timing Analysis and Clock Tree Synthesis (CTS)  </summary>
