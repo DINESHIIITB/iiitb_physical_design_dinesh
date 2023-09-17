@@ -311,7 +311,51 @@ Library contains following information:
 <details>
  <summary> Cell design and characterization follows </summary>
 
+Introduction
 
+In the realm of digital integrated circuit design, standard cells play a pivotal role. These standard cells are pre-designed and pre-characterized building blocks, encompassing logic gates, flip-flops, latches, and various digital components, readily available in libraries. This documentation outlines the key aspects of the Standard Cell Design and Characterization process.
+
+Standard Cell Design Flow
+
+The process of standard cell design unfolds as follows:
+
+Inputs:
+
+    Process Design Kits (PDKs): Essential for understanding the fabrication process.
+    Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
+    SPICE Models: Utilized for simulation and analysis.
+    Libraries: Containing standard cell definitions.
+    User-Defined Specifications: Tailoring the design to meet specific requirements.
+
+Design Steps:
+
+    Circuit Design: Defining the logical behavior of the standard cell.
+    Layout Design: Crafted using techniques like Euler's path and stick diagrams.
+    Extraction of Parasitics: Identifying and quantifying parasitic elements.
+    Characterization: Assessing timing, noise, and power characteristics.
+
+Outputs:
+
+    Circuit Description Language (CDL): A textual representation of the cell.
+    Layout Exchange Format (LEF): A format for sharing layout information.
+    GDSII: A standard file format for mask data.
+    Extracted SPICE Netlist (.cir): A file detailing the electrical components.
+    Timing, Noise, and Power .lib Files: Libraries with critical data for circuit optimization.
+
+Standard Cell Characterization Flow
+
+Characterization is the process of comprehensively evaluating electrical and performance characteristics of specific standard cells or library elements. It is crucial for understanding cell behavior under various operational conditions. The characterization process unfolds as follows:
+
+    Read in the Models and Tech Files: Gathering essential data and technology specifications.
+    Read Extracted SPICE Netlist: Accessing the electrical representation of the cell.
+    Recognize Behavior of the Cell: Understanding the cell's functionality.
+    Read the Subcircuits: Analyzing component subcircuits within the cell.
+    Attach Power Sources: Connecting power supplies to simulate real-world conditions.
+    Apply Stimulus to Characterization Setup: Providing input signals for testing.
+    Provide Necessary Output Capacitance Loads: Mimicking the load conditions.
+    Provide Necessary Simulation Commands: Configuring simulation settings.
+
+For standard cell characterization, we recommend utilizing the open-source software, GUNA. This software streamlines the process by taking input from steps 1 to 8 and generates critical timing, noise, and power models. These models are indispensable for the precise design and optimization of digital circuits using standard cells.
 
 
 
@@ -322,9 +366,52 @@ Library contains following information:
 <details>
  <summary> General timing characterization parameters </summary>
 
+  1. slew_low_rise_thr: This is the threshold at which the rising signal (transition from low to high) reaches 20% of its full value.
+  
+  2. slew_high_rise_thr: This is the threshold at which the rising signal reaches 80% of its full value.
+  
+  3. slew_low_fall_thr: This is the threshold at which the falling signal (transition from high to low) reaches 20% of its full value.
+  
+  4. slew_high_fall_thr: This is the threshold at which the falling signal reaches 80% of its full value.
+  
+  5. in_rise_thr: This is the threshold for the input signal during its rising transition, typically set at 50% of its full value.
+  
+  6. in_fall_thr: This is the threshold for the input signal during its falling transition, also set at 50% of its full value.
+  
+  7. out_rise_thr: This is the threshold for the output signal during its rising transition, again set at 50% of its full value.
+  
+  8. out_fall_thr: This is the threshold for the output signal during its falling transition, also set at 50% of its full value.
 
+* Propagation Delay:
 
+Propagation delay is the time it takes for a change in an input signal to propagate through a digital circuit and reach 50% of its final value in the output signal. It is a critical parameter for assessing circuit performance and signal timing.
 
+Mathematically, propagation delay can be expressed as:
+
+* Propagation Delay = time(out_fall_thr) - time(in_rise_thr)
+* time(out_fall_thr) is the time when the output signal reaches 50% of its final value during its falling transition.
+*  time(in_rise_thr) is the time when the input signal reaches 50% of its final value during its rising transition.
+
+* Transition Time:
+
+Transition time refers to the duration it takes for a digital signal to change its voltage level from one logic state (e.g., logic low or 0) to another logic state (e.g., logic high or 1), or vice versa. Transition time is essential for assessing how quickly a signal can switch between logic states.
+
+There are two types of transition times:
+
+1. Fall Transition Time:
+    Fall transition time measures the duration it takes for a signal to transition from a high voltage level to a low voltage level. It can be calculated as:
+Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
+
+    * time(slew_high_fall_thr) is the time when the falling signal reaches 80% of its final value.
+    * time(slew_low_fall_thr) is the time when the falling signal reaches 20% of its final value.
+
+2. Rise Transition Time:
+Rise transition time measures the duration it takes for a signal to transition from a low voltage level to a high voltage level. It can be calculated as:
+
+Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
+
+    * time(slew_high_rise_thr) is the time when the rising signal reaches 80% of its final value.
+    * time(slew_low_rise_thr) is the time when the rising signal reaches 20% of its final value.
 
 </details>
 
