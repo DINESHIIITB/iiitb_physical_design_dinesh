@@ -3,9 +3,16 @@
 
 [week 0](#week_0)
 
-[Day 0](#day-0)
-
 [Day 1](#day-1)
+
+[Day 2](#day-2)
+
+[Day 3](#day-3)
+
+[Day 4](#day-4)
+
+[Day 5](#day-5)
+
 
 # week_0
 
@@ -363,12 +370,32 @@ Library contains following information:
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/6aabcdda-8e21-4d6d-84a6-788caef6c1cb)
 
 
+</details>
 
+### Day 4
+
+
+<details>
+ <summary> Timing Analysis and Clock Tree Synthesis (CTS)  </summary>
 
 
 
 </details>
 
+
+<details>
+ <summary> Post-synthesis timing analysis Using OpenSTA  </summary>
+
+
+
+</details>
+
+<details>
+ <summary> Clock Tree Synthesis using Tritoncts </summary>
+
+
+
+</details>
 
 
 
