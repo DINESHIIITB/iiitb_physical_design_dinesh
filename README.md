@@ -382,6 +382,36 @@ Library contains following information:
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/9f7389dd-70c6-40f1-b786-62df9debf0e8)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/2e5795dd-04a9-481c-9772-c5c6ac04b437)
+
+Select port A in magic:
+port class input
+port use signal
+
+Select Y area
+port class output
+port use signal
+
+Select VPWR area
+port class inout
+port use power
+
+Select VGND area
+port class inout
+port use ground
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/ab1f2794-173b-4067-b986-fd33edc5e3de)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/898022f9-729d-4569-8ab8-7fa144438783)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/c0dc2345-b727-4464-9b39-71f1f39a0727)
+
+
+
+
+
 </details>
 
 
