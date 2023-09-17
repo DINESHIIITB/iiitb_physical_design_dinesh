@@ -16,7 +16,7 @@
 
 # week_0
 
-## Day 0
+## Day 1
 
 <details>
  <summary> Installing the necessary tools </summary>
@@ -219,7 +219,7 @@ prep -design picorv32a
 </details>
 
 
-## Day 1
+## Day 2
 
 ### Good floorplan Bad floorplan and Introduction to library cells 
 
