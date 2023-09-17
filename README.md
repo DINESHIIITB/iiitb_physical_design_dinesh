@@ -319,41 +319,38 @@ Standard Cell Design Flow
 
 The process of standard cell design unfolds as follows:
 
-Inputs:
+1. Inputs:
+           * Process Design Kits (PDKs): Essential for understanding the fabrication process.
+           * Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
+           * SPICE Models: Utilized for simulation and analysis.
+           * Libraries: Containing standard cell definitions.
+           * User-Defined Specifications: Tailoring the design to meet specific requirements.
 
-    Process Design Kits (PDKs): Essential for understanding the fabrication process.
-    Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
-    SPICE Models: Utilized for simulation and analysis.
-    Libraries: Containing standard cell definitions.
-    User-Defined Specifications: Tailoring the design to meet specific requirements.
+2. Design Steps:
+          * Circuit Design: Defining the logical behavior of the standard cell.
+          * Layout Design: Crafted using techniques like Euler's path and stick diagrams.
+          * Extraction of Parasitics: Identifying and quantifying parasitic elements.
+          * Characterization: Assessing timing, noise, and power characteristics.
 
-Design Steps:
-
-    Circuit Design: Defining the logical behavior of the standard cell.
-    Layout Design: Crafted using techniques like Euler's path and stick diagrams.
-    Extraction of Parasitics: Identifying and quantifying parasitic elements.
-    Characterization: Assessing timing, noise, and power characteristics.
-
-Outputs:
-
-    Circuit Description Language (CDL): A textual representation of the cell.
-    Layout Exchange Format (LEF): A format for sharing layout information.
-    GDSII: A standard file format for mask data.
-    Extracted SPICE Netlist (.cir): A file detailing the electrical components.
-    Timing, Noise, and Power .lib Files: Libraries with critical data for circuit optimization.
+3. Outputs:
+         * Circuit Description Language (CDL): A textual representation of the cell.
+         * Layout Exchange Format (LEF): A format for sharing layout information.
+         * GDSII: A standard file format for mask data.
+         * Extracted SPICE Netlist (.cir): A file detailing the electrical components.
+         * Timing, Noise, and Power .lib Files: Libraries with critical data for circuit optimization.
 
 Standard Cell Characterization Flow
 
 Characterization is the process of comprehensively evaluating electrical and performance characteristics of specific standard cells or library elements. It is crucial for understanding cell behavior under various operational conditions. The characterization process unfolds as follows:
 
-    Read in the Models and Tech Files: Gathering essential data and technology specifications.
-    Read Extracted SPICE Netlist: Accessing the electrical representation of the cell.
-    Recognize Behavior of the Cell: Understanding the cell's functionality.
-    Read the Subcircuits: Analyzing component subcircuits within the cell.
-    Attach Power Sources: Connecting power supplies to simulate real-world conditions.
-    Apply Stimulus to Characterization Setup: Providing input signals for testing.
-    Provide Necessary Output Capacitance Loads: Mimicking the load conditions.
-    Provide Necessary Simulation Commands: Configuring simulation settings.
+1. Read in the Models and Tech Files: Gathering essential data and technology specifications.
+2. Read Extracted SPICE Netlist: Accessing the electrical representation of the cell.
+3. Recognize Behavior of the Cell: Understanding the cell's functionality.
+4. Read the Subcircuits: Analyzing component subcircuits within the cell.
+5. Attach Power Sources: Connecting power supplies to simulate real-world conditions.
+6. Apply Stimulus to Characterization Setup: Providing input signals for testing.
+7. Provide Necessary Output Capacitance Loads: Mimicking the load conditions.
+8. Provide Necessary Simulation Commands: Configuring simulation settings.
 
 For standard cell characterization, we recommend utilizing the open-source software, GUNA. This software streamlines the process by taking input from steps 1 to 8 and generates critical timing, noise, and power models. These models are indispensable for the precise design and optimization of digital circuits using standard cells.
 
