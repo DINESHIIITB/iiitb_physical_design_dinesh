@@ -378,6 +378,7 @@ Library contains following information:
 <details>
  <summary> Timing Analysis and Clock Tree Synthesis (CTS)  </summary>
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e25b1545-0113-4651-be74-0a154c579424)
 
 
 </details>
