@@ -425,6 +425,52 @@ Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
  <summary> Labs for CMOS inverter ngspice simulations </summary>
 
 
+In this section, we will outline the process of creating a SPICE deck and conducting simulations for a CMOS inverter using NGSpice. The CMOS inverter consists of complementary metal-oxide-semiconductor (CMOS) components, including both p-type (PMOS) and n-type (NMOS) transistors.
+
+### SPICE Deck Creation and Simulation for CMOS Inverter:
+
+    SPICE Deck: A SPICE deck refers to the component connectivity, essentially a netlist, for the CMOS inverter. It defines how components are connected within the circuit.
+
+    SPICE Deck Values: Specify the values for key parameters, such as W/L (Width/Length). For example, "0.375u/0.25u" indicates that the width is 375 nanometers, and the length is 250 nanometers. It's essential to note that PMOS transistors should have a wider width compared to NMOS transistors, often 2x or 3x wider. Gate and supply voltages are typically multiples of the length; for instance, the gate voltage might be set at 2.5 volts.
+
+    Add Nodes: Surround each component in your circuit with nodes and assign unique names to these nodes. These node names are used in the SPICE netlist to identify and connect components properly.
+
+Additional Notes:
+
+    Width vs. Length: In CMOS technology, "width" refers to the length of the source and drain regions, while "length" denotes the distance between the source and drain. These parameters significantly impact the performance of transistors.
+
+    PMOS and NMOS Sizing: PMOS transistors typically have slower carrier mobility (holes) compared to NMOS transistors (electrons). To achieve balanced rise and fall times in your CMOS inverter, the PMOS transistor should have a larger width, reducing its resistance and increasing mobility.
+
+   * SPICE Deck netlsit description
+     
+ ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/87fad89f-75dc-4c0e-a44d-696ac694855e)
+
+***syntax for PMOS and NMOS desription***
+[component name] [drain] [gate] [source] [substrate] [transistor type] W=[width] L=[length]
+
+ ***simulation commands***
+.op --- is the start of SPICE simulation operation where Vin will be sweep from 0 to 2.5 with 0.5 steps
+tsmc_025um_model.mod  ----  model file containing the technological parameters for the 0.25um NMOS and PMOS 
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/4c5384a4-f831-48fd-b4f4-8768f696e35f)
+
+ Determining CMOS Switching Threshold Vm
+
+The switching threshold, denoted as Vm, in CMOS circuits is a critical parameter that depends on several factors. It represents the input voltage (Vin) at which the output voltage (Vout) switches, signifying that both the PMOS and NMOS transistors are in saturation or turned on, leading to higher leakage current. Here are the key factors influencing the robustness of CMOS switching threshold Vm:
+
+    Transistor Sizing: The relative sizes (width/length ratios, W/L) of PMOS and NMOS transistors play a significant role. If the PMOS transistor is larger (thicker) than the NMOS transistor, the CMOS circuit tends to have a higher switching threshold (e.g., 1.2V). Conversely, when the NMOS transistor is larger, the threshold voltage tends to be lower (e.g., 1V). This size relationship affects the balance of carrier mobility and resistance in the transistors.
+
+    Saturation Region: The switching threshold occurs when both the PMOS and NMOS transistors are in the saturation region. In this state, both transistors are turned on, and there is a high likelihood of current flowing directly from the supply voltage (VDD) to ground (GND). This is often referred to as leakage current, and minimizing it is essential for power efficiency.
+
+To find the switching threshold Vm during DC transfer analysis, the following SPICE simulation commands are used with a DC input of 2.5V, sweeping the input voltage from 0V to 2.5V in 0.05V steps:
+
+plaintext
+
+Vin in 0 2.5
+*** Simulation Command ***
+.op
+.dc Vin 0 2.5 0.05
+
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/05fd9056-5879-4643-ae8e-2104f5b15f20)
 
 
@@ -462,40 +508,6 @@ Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
 </details>
 
 ### Day 4
-
-
-<details>
- <summary> CMOS Inverter NGSpice Simulations  </summary>
-
-
-In this section, we will outline the process of creating a SPICE deck and conducting simulations for a CMOS inverter using NGSpice. The CMOS inverter consists of complementary metal-oxide-semiconductor (CMOS) components, including both p-type (PMOS) and n-type (NMOS) transistors.
-
-SPICE Deck Creation and Simulation for CMOS Inverter:
-
-    SPICE Deck: A SPICE deck refers to the component connectivity, essentially a netlist, for the CMOS inverter. It defines how components are connected within the circuit.
-
-    SPICE Deck Values: Specify the values for key parameters, such as W/L (Width/Length). For example, "0.375u/0.25u" indicates that the width is 375 nanometers, and the length is 250 nanometers. It's essential to note that PMOS transistors should have a wider width compared to NMOS transistors, often 2x or 3x wider. Gate and supply voltages are typically multiples of the length; for instance, the gate voltage might be set at 2.5 volts.
-
-    Add Nodes: Surround each component in your circuit with nodes and assign unique names to these nodes. These node names are used in the SPICE netlist to identify and connect components properly.
-
-Additional Notes:
-
-    Width vs. Length: In CMOS technology, "width" refers to the length of the source and drain regions, while "length" denotes the distance between the source and drain. These parameters significantly impact the performance of transistors.
-
-    PMOS and NMOS Sizing: PMOS transistors typically have slower carrier mobility (holes) compared to NMOS transistors (electrons). To achieve balanced rise and fall times in your CMOS inverter, the PMOS transistor should have a larger width, reducing its resistance and increasing mobility.
-
-   * SPICE Deck netlsit description
-     
- ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/87fad89f-75dc-4c0e-a44d-696ac694855e)
-
-***syntax for PMOS and NMOS desription***
-[component name] [drain] [gate] [source] [substrate] [transistor type] W=[width] L=[length]
-
- ***simulation commands***
-.op --- is the start of SPICE simulation operation where Vin will be sweep from 0 to 2.5 with 0.5 steps
-tsmc_025um_model.mod  ----  model file containing the technological parameters for the 0.25um NMOS and PMOS 
-    
-</details>
 
 <details>
  <summary> Timing Analysis and Clock Tree Synthesis (CTS)  </summary>
