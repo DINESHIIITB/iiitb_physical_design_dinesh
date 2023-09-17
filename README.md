@@ -352,12 +352,15 @@ Library contains following information:
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/1d5360a0-6760-4ba7-a420-093cb31c1868)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/599c4af1-2ff7-429c-a188-39daba1c8ed7)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/2355141d-b05c-4423-a536-0f4336455d1e)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e5ce8212-1bbe-4bc0-9c19-a4bfbff56779)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/7e016e74-8870-4c4b-b60c-6f3de44aecca)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/6aabcdda-8e21-4d6d-84a6-788caef6c1cb)
 
 
 
