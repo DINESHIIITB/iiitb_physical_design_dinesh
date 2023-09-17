@@ -422,7 +422,7 @@ Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
 ### Design library cell using magic layout and ngspice characterization 
 
 <details>
- <summary> Labs for CMOS inverter ngspice simulations </summary>
+ <summary> CMOS inverter ngspice simulations </summary>
 
 
 In this section, we will outline the process of creating a SPICE deck and conducting simulations for a CMOS inverter using NGSpice. The CMOS inverter consists of complementary metal-oxide-semiconductor (CMOS) components, including both p-type (PMOS) and n-type (NMOS) transistors.
@@ -470,6 +470,411 @@ Vin in 0 2.5
 *** Simulation Command ***
 .op
 .dc Vin 0 2.5 0.05
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/4ba84476-cc3a-4d0d-b322-c7ecb3f2988d)
+
+### Labs
+
+User
+Each cell that is placed on the layout is referred to as standard cell. Standard cells are pre-designed and pre-characterized logic gates, flip-flops, latches, and other digital components for which the definition is available in libraries.
+
+Standard Cell Design Flow
+
+Standard cell design flow involves the following:
+
+    Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, user-defined specifications
+    Design steps: Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power)
+    Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
+
+Standard Cell Characterization Flow
+
+Characterization refers to the process of gathering and analyzing electrical and performance data for a specific cell or library element. The goal of characterization is to provide accurate and comprehensive information about how the cell behaves under various operating conditions. This information is essential for designing and optimizing digital circuits using these cells.
+
+A typical standard cell characterization flow includes the following steps:
+
+    Read in the models and tech files
+    Read extracted spice netlist
+    Recognise behaviour of the cell
+    Read the subcircuits
+    Attach power sources
+    Apply stimulus to characterization setup
+    Provide necessary output capacitance loads
+    Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
+rewrite in goodformat for github repo
+ChatGPT
+
+Certainly! Here's a reformatted version of the information for a GitHub repository:
+
+Repository Title: Standard Cell Design and Characterization Flow
+
+Description:
+This GitHub repository provides detailed documentation and resources for the standard cell design and characterization flow in digital integrated circuit design. Standard cells are pre-designed logic gates, flip-flops, latches, and other digital components crucial for modern semiconductor manufacturing. Understanding their design and characterization is fundamental to building efficient digital circuits.
+
+Contents:
+
+    Introduction
+        Overview of Standard Cells
+        Importance of Characterization
+
+    Standard Cell Design Flow
+        Inputs:
+            Process Design Kits (PDKs)
+            Design Rule Check (DRC) & Layout vs. Schematic (LVS) rules
+            SPICE models
+            Libraries
+            User-defined specifications
+        Design Steps:
+            Circuit design
+            Layout design (Art of layout Euler's path and stick diagram)
+            Extraction of parasitics
+            Characterization (timing, noise, power)
+        Outputs:
+            Circuit Description Language (CDL)
+            Layout Exchange Format (LEF)
+            GDSII layout files
+            Extracted SPICE netlist (.cir)
+            Timing, noise, and power .lib files
+
+    Standard Cell Characterization Flow
+        Characterization Steps:
+            Read in the models and tech files
+            Read the extracted SPICE netlist
+            Recognize the behavior of the cell
+            Read the subcircuits
+            Attach power sources
+            Apply stimulus to the characterization setup
+            Provide necessary output capacitance loads
+            Provide necessary simulation commands
+        Characterization Tool:
+            The open-source software GUNA is recommended for characterization.
+        Output:
+            GUNA software generates timing, noise, and power models.
+
+Usage:
+
+    This repository serves as a comprehensive guide for anyone involved in digital integrated circuit design. It explains the standard cell design and characterization processes, making it easier to work with libraries and optimize digital circuits.
+
+Contributing:
+
+    Contributions are welcome! If you have improvements, corrections, or additional resources related to standard cell design and characterization, feel free to submit pull requests.
+
+License:
+
+    This repository is open-source and available under [LICENSE_NAME].
+
+Disclaimer:
+
+    The information in this repository is based on knowledge available up to September 2021. Ensure you have the latest resources and consult relevant documentation for the most current information.
+
+Author:
+[Your Name]
+
+Contact:
+
+    Email: [Your Email Address]
+    LinkedIn: [Your LinkedIn Profile]
+
+Feel free to customize this format to fit your GitHub repository's needs.
+User
+Each cell that is placed on the layout is referred to as standard cell. Standard cells are pre-designed and pre-characterized logic gates, flip-flops, latches, and other digital components for which the definition is available in libraries.
+
+Standard Cell Design Flow
+
+Standard cell design flow involves the following:
+
+    Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, user-defined specifications
+    Design steps: Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power)
+    Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
+
+Standard Cell Characterization Flow
+
+Characterization refers to the process of gathering and analyzing electrical and performance data for a specific cell or library element. The goal of characterization is to provide accurate and comprehensive information about how the cell behaves under various operating conditions. This information is essential for designing and optimizing digital circuits using these cells.
+
+A typical standard cell characterization flow includes the following steps:
+
+    Read in the models and tech files
+    Read extracted spice netlist
+    Recognise behaviour of the cell
+    Read the subcircuits
+    Attach power sources
+    Apply stimulus to characterization setup
+    Provide necessary output capacitance loads
+    Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
+rewrite 
+ChatGPT
+
+Standard Cell Design and Characterization
+
+Introduction
+
+In the realm of digital integrated circuit design, standard cells play a pivotal role. These standard cells are pre-designed and pre-characterized building blocks, encompassing logic gates, flip-flops, latches, and various digital components, readily available in libraries. This documentation outlines the key aspects of the Standard Cell Design and Characterization process.
+
+Standard Cell Design Flow
+
+The process of standard cell design unfolds as follows:
+
+Inputs:
+
+    Process Design Kits (PDKs): Essential for understanding the fabrication process.
+    Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
+    SPICE Models: Utilized for simulation and analysis.
+    Libraries: Containing standard cell definitions.
+    User-Defined Specifications: Tailoring the design to meet specific requirements.
+
+Design Steps:
+
+    Circuit Design: Defining the logical behavior of the standard cell.
+    Layout Design: Crafted using techniques like Euler's path and stick diagrams.
+    Extraction of Parasitics: Identifying and quantifying parasitic elements.
+    Characterization: Assessing timing, noise, and power characteristics.
+
+Outputs:
+
+    Circuit Description Language (CDL): A textual representation of the cell.
+    Layout Exchange Format (LEF): A format for sharing layout information.
+    GDSII: A standard file format for mask data.
+    Extracted SPICE Netlist (.cir): A file detailing the electrical components.
+    Timing, Noise, and Power .lib Files: Libraries with critical data for circuit optimization.
+
+Standard Cell Characterization Flow
+
+Characterization is the process of comprehensively evaluating electrical and performance characteristics of specific standard cells or library elements. It is crucial for understanding cell behavior under various operational conditions. The characterization process unfolds as follows:
+
+    Read in the Models and Tech Files: Gathering essential data and technology specifications.
+    Read Extracted SPICE Netlist: Accessing the electrical representation of the cell.
+    Recognize Behavior of the Cell: Understanding the cell's functionality.
+    Read the Subcircuits: Analyzing component subcircuits within the cell.
+    Attach Power Sources: Connecting power supplies to simulate real-world conditions.
+    Apply Stimulus to Characterization Setup: Providing input signals for testing.
+    Provide Necessary Output Capacitance Loads: Mimicking the load conditions.
+    Provide Necessary Simulation Commands: Configuring simulation settings.
+
+For standard cell characterization, we recommend utilizing the open-source software, GUNA. This software streamlines the process by taking input from steps 1 to 8 and generates critical timing, noise, and power models. These models are indispensable for the precise design and optimization of digital circuits using standard cells.
+
+Feel free to use this documentation as a reference for your work in standard cell design and characterization. It provides a clear roadmap for harnessing the power of standard cells in digital circuit design.
+User
+| Timing defintion |	Value |
+| ---------------- | ----- |
+| slew_low_rise_thr |	20% value |
+| slew_high_rise_thr |	80% value |
+| slew_low_fall_thr |	20% value |
+| slew_high_fall_thr |	80% value |
+| in_rise_thr |	50% value |
+| in_fall_thr |	50% value |
+| out_rise_thr |	50% value |
+| out_fall_thr |	50% value |
+ChatGPT
+
+It looks like you've provided a table with timing definitions and their corresponding values. These definitions are typically used in digital circuit design and analysis. Here's a breakdown of each timing definition:
+
+    slew_low_rise_thr: This is the threshold at which the rising signal (transition from low to high) reaches 20% of its full value.
+
+    slew_high_rise_thr: This is the threshold at which the rising signal reaches 80% of its full value.
+
+    slew_low_fall_thr: This is the threshold at which the falling signal (transition from high to low) reaches 20% of its full value.
+
+    slew_high_fall_thr: This is the threshold at which the falling signal reaches 80% of its full value.
+
+    in_rise_thr: This is the threshold for the input signal during its rising transition, typically set at 50% of its full value.
+
+    in_fall_thr: This is the threshold for the input signal during its falling transition, also set at 50% of its full value.
+
+    out_rise_thr: This is the threshold for the output signal during its rising transition, again set at 50% of its full value.
+
+    out_fall_thr: This is the threshold for the output signal during its falling transition, also set at 50% of its full value.
+
+These thresholds are crucial for timing analysis in digital circuits. They help determine when signals have transitioned to specific voltage levels, which is essential for proper circuit operation and signal integrity.
+User
+
+Propagation Delay
+
+Propagation delay refers to the time it takes for a change in an input signal to reach 50% of its final value to produce a corresponding change in the output signal to reach 50% of its final value of a digital circuit.
+
+rise delay =  time(out_fall_thr) - time(in_rise_thr)
+
+Transition time
+
+Transition time refers to the time it takes for a digital signal to change its voltage level from one logic state (e.g., logic low or 0) to another logic state (e.g., logic high or 1) or vice versa. Transition time is typically measured as the time interval between the moment when the signal voltage reaches a specific percentage (e.g., 10% to 90% or 20% to 80%) of its final value during a voltage transition and the moment when it reaches the opposite percentage during the subsequent transition.
+
+Fall transition time: time(slew_high_fall_thr) - time(slew_low_fall_thr)
+Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
+rewite 
+ChatGPT
+
+Certainly, here's a more organized and concise presentation of the concepts of propagation delay and transition time in digital circuits:
+
+Propagation Delay:
+Propagation delay is the time it takes for a change in an input signal to propagate through a digital circuit and reach 50% of its final value in the output signal. It is a critical parameter for assessing circuit performance and signal timing.
+
+Mathematically, propagation delay can be expressed as:
+
+css
+
+Propagation Delay = time(out_fall_thr) - time(in_rise_thr)
+
+    time(out_fall_thr) is the time when the output signal reaches 50% of its final value during its falling transition.
+    time(in_rise_thr) is the time when the input signal reaches 50% of its final value during its rising transition.
+
+Transition Time:
+Transition time refers to the duration it takes for a digital signal to change its voltage level from one logic state (e.g., logic low or 0) to another logic state (e.g., logic high or 1), or vice versa. Transition time is essential for assessing how quickly a signal can switch between logic states.
+
+There are two types of transition times:
+
+    Fall Transition Time:
+    Fall transition time measures the duration it takes for a signal to transition from a high voltage level to a low voltage level. It can be calculated as:
+
+    css
+
+Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
+
+    time(slew_high_fall_thr) is the time when the falling signal reaches 80% of its final value.
+    time(slew_low_fall_thr) is the time when the falling signal reaches 20% of its final value.
+
+Rise Transition Time:
+Rise transition time measures the duration it takes for a signal to transition from a low voltage level to a high voltage level. It can be calculated as:
+
+css
+
+    Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
+
+        time(slew_high_rise_thr) is the time when the rising signal reaches 80% of its final value.
+        time(slew_low_rise_thr) is the time when the rising signal reaches 20% of its final value.
+
+These parameters are vital for assessing the speed and performance of digital circuits and are critical in ensuring that signals switch reliably and within specified timing constraints.
+User
+side heading in github readme format
+ChatGPT
+
+In GitHub README files, you can create side headings or subsections by using one or more # symbols before your text. The number of # symbols you use determines the level of the heading. Here's how you can create side headings of different levels:
+
+markdown
+
+# Main Heading (Level 1)
+This is your main content.
+
+## Subheading (Level 2)
+This is a subsection or side heading under the main heading.
+
+### Sub-subheading (Level 3)
+This is a further subsection or side heading under the subheading.
+
+You can create side headings by adjusting the number of # symbols. You can use up to six levels of headings in Markdown, with # being the highest level (Level 1) and ###### being the lowest level (Level 6). GitHub will automatically format these headings with appropriate styles in your README file.
+User
+ 4.1 CMOS inverter ngspice simulations
+
+SPICE Deck creation and simulation for CMOS Inverter:
+
+    SPICE deck = component connectivity (basically a netlist) of the CMOS inverter.
+    SPICE deck values = value for W/L (0.375u/0.25u means width is 375nm and lengthis 250nm). PMOS should be wider in width(2x or 3x) than NMOS. The gate and supply voltages are normally a multiple of length (in the example, gate voltage can be 2.5V)
+    Add nodes to surround each component and name it. This will be used in SPICE to identify a component.
+
+Notes:
+
+    Width is the length of source and drain. Length is the distance between source and drain.
+    PMOS hole carrier is slower than NMOS electron carrier mobility, so to match the rise and fall time PMOS must be thicker (less resistance thus higher mobility) than NMOS.
+rewrite
+ChatGPT
+
+Section 4.1: CMOS Inverter NGSpice Simulations
+
+In this section, we will outline the process of creating a SPICE deck and conducting simulations for a CMOS inverter using NGSpice. The CMOS inverter consists of complementary metal-oxide-semiconductor (CMOS) components, including both p-type (PMOS) and n-type (NMOS) transistors.
+
+SPICE Deck Creation and Simulation for CMOS Inverter:
+
+    SPICE Deck: A SPICE deck refers to the component connectivity, essentially a netlist, for the CMOS inverter. It defines how components are connected within the circuit.
+
+    SPICE Deck Values: Specify the values for key parameters, such as W/L (Width/Length). For example, "0.375u/0.25u" indicates that the width is 375 nanometers, and the length is 250 nanometers. It's essential to note that PMOS transistors should have a wider width compared to NMOS transistors, often 2x or 3x wider. Gate and supply voltages are typically multiples of the length; for instance, the gate voltage might be set at 2.5 volts.
+
+    Add Nodes: Surround each component in your circuit with nodes and assign unique names to these nodes. These node names are used in the SPICE netlist to identify and connect components properly.
+
+Additional Notes:
+
+    Width vs. Length: In CMOS technology, "width" refers to the length of the source and drain regions, while "length" denotes the distance between the source and drain. These parameters significantly impact the performance of transistors.
+
+    PMOS and NMOS Sizing: PMOS transistors typically have slower carrier mobility (holes) compared to NMOS transistors (electrons). To achieve balanced rise and fall times in your CMOS inverter, the PMOS transistor should have a larger width, reducing its resistance and increasing mobility.
+
+This approach ensures proper operation and desired characteristics for your CMOS inverter circuit during NGSpice simulations.
+User
+Switching Threshold Vm CMOS robustness depends on:
+
+    Switching threshold = Vin is equal to Vout. This the point where both PMOS and NMOS is in saturation or kind of turned on, and leakage current is high. If PMOS is thicker than NMOS, the CMOS will have higher switching threshold (1.2V vs 1V) while threshold will be lower when NMOS becomes thicker.
+    At this point, both the transistors are in saturation region, means both are turned on and have high chances of current flowing driectly from VDD to Ground called Leakage current.
+
+DC transfer analysis is used for finding switching threshold. SPICE DC analysis below uses DC input of 2.5V. Simulation operation is DC sweep from 0V to 2.5V by 0.05V steps:
+
+Vin in 0 2.5
+*** Simulation Command ***
+.op
+.dc Vin 0 2.5 0.05
+
+
+Determining CMOS Switching Threshold Vm
+
+The switching threshold, denoted as Vm, in CMOS circuits is a critical parameter that depends on several factors. It represents the input voltage (Vin) at which the output voltage (Vout) switches, signifying that both the PMOS and NMOS transistors are in saturation or turned on, leading to higher leakage current. Here are the key factors influencing the robustness of CMOS switching threshold Vm:
+
+    Transistor Sizing: The relative sizes (width/length ratios, W/L) of PMOS and NMOS transistors play a significant role. If the PMOS transistor is larger (thicker) than the NMOS transistor, the CMOS circuit tends to have a higher switching threshold (e.g., 1.2V). Conversely, when the NMOS transistor is larger, the threshold voltage tends to be lower (e.g., 1V). This size relationship affects the balance of carrier mobility and resistance in the transistors.
+
+    Saturation Region: The switching threshold occurs when both the PMOS and NMOS transistors are in the saturation region. In this state, both transistors are turned on, and there is a high likelihood of current flowing directly from the supply voltage (VDD) to ground (GND). This is often referred to as leakage current, and minimizing it is essential for power efficiency.
+
+To find the switching threshold Vm during DC transfer analysis, the following SPICE simulation commands are used with a DC input of 2.5V, sweeping the input voltage from 0V to 2.5V in 0.05V steps:
+
+plaintext
+
+Vin in 0 2.5
+*** Simulation Command ***
+.op
+.dc Vin 0 2.5 0.05
+
+This simulation process helps determine the precise voltage point at which the CMOS circuit transitions from one logic state to another, facilitating robust and efficient digital circuit design.
+User
+
+Clone Required Files:
+
+ First, clone the required mag files and spicemodels of inverter,pmos and nmos sky130. 
+ The command to clone files from github link is:
+```
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+```
+
+once I run this command, it will create vsdstdcelldesign folder in openlane directory.
+
+Inorder to open the mag file and run magic go to the directory
+
+For layout we run magic command
+
+magic -T sky130A.tech sky130_inv.mag &
+
+Ampersand at the end makes the next prompt line free, otherwise magic keeps the prompt line busy. Once we run the magic command we get the layout of the inverter in the magic window, rwrite
+ChatGPT
+
+Cloning and Running Magic for Sky130 Inverter Layout
+
+To work with the Sky130 inverter layout using the Magic tool, follow these steps:
+
+    Clone Required Files:
+    First, clone the required Mag (Magic layout files) and Spice Models for the inverter, PMOS, and NMOS from the GitHub repository using the following command:
+
+    bash
+
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+This command will create a vsdstdcelldesign folder within your openlane directory.
+
+Open Magic Tool:
+Navigate to the directory where the layout files are located. In your case, it's likely within the vsdstdcelldesign folder. To open the Magic tool, run the following command:
+
+bash
+
+magic -T sky130A.tech sky130_inv.mag &
+
+    -T sky130A.tech specifies the technology file, which defines the parameters and rules for the Sky130 process.
+    sky130_inv.mag is the layout file for the inverter.
+
+The ampersand (&) at the end of the command allows you to keep the command line free for further use while Magic runs in the background.
+
+Inspect Layout:
+After running the above command, the Magic window should open, displaying the layout of the inverter. You can use Magic's features to inspect, modify, and analyze the layout as needed.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/05fd9056-5879-4643-ae8e-2104f5b15f20)
 
