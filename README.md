@@ -415,8 +415,11 @@ port use ground
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/cacc2630-8790-41da-9f1f-dad5de2e9be1)
 
-![Uploading image.png…]()
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/15f42b05-0536-42ed-a77e-3ccfd7e9b654)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/ade7c5b5-7e24-4747-a4ed-f68bd19d4d29)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/89739593-0672-42a3-8496-178178ad9cd0)
 
 
 </details>
