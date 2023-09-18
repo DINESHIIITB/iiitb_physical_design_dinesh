@@ -482,30 +482,17 @@ Standard Cell Characterization Flow
 Characterization refers to the process of gathering and analyzing electrical and performance data for a specific cell or library element. The goal of characterization is to provide accurate and comprehensive information about how the cell behaves under various operating conditions. This information is essential for designing and optimizing digital circuits using these cells.
 
 A typical standard cell characterization flow includes the following steps:
-
-    Read in the models and tech files
-    Read extracted spice netlist
-    Recognise behaviour of the cell
-    Read the subcircuits
-    Attach power sources
-    Apply stimulus to characterization setup
-    Provide necessary output capacitance loads
+1. Read in the models and tech files
+2. Read extracted spice netlist
+3. Recognise behaviour of the cell
+4. Read the subcircuits
+5. Attach power sources
+6. Apply stimulus to characterization setup
+7. Provide necessary output capacitance loads
     Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
-
-
-RStandard Cell Design and Characterization Flow
-
-Description:
-This GitHub repository provides detailed documentation and resources for the standard cell design and characterization flow in digital integrated circuit design. Standard cells are pre-designed logic gates, flip-flops, latches, and other digital components crucial for modern semiconductor manufacturing. Understanding their design and characterization is fundamental to building efficient digital circuits.
-
-Contents:
-
-    Introduction
-        Overview of Standard Cells
-        Importance of Characterization
-
-    Standard Cell Design Flow
-        Inputs:
+   
+#### Standard Cell Design Flow
+      Inputs:
             Process Design Kits (PDKs)
             Design Rule Check (DRC) & Layout vs. Schematic (LVS) rules
             SPICE models
