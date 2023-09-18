@@ -864,11 +864,35 @@ Add or modify the library definitions to include the paths to your custom cell l
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/cacc2630-8790-41da-9f1f-dad5de2e9be1)
 
+
+To integrate standard cell in openlane flow after make mount , perform following commands:
+```
+prep -design picorv32a -tag RUN_2023.09.09_20.37.18 -overwrite 
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+```
+
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/15f42b05-0536-42ed-a77e-3ccfd7e9b654)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/ade7c5b5-7e24-4747-a4ed-f68bd19d4d29)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/89739593-0672-42a3-8496-178178ad9cd0)
+
+
+#### Delay Tables
+
+In VLSI design, "delay tables" are essential tools. They encapsulate how a cell behaves in terms of timing.
+Delay, a pivotal parameter, hinges on input transition and load conditions. Even identical cells can exhibit varying delays, as seen when placed at the end of long or short wires.To ensure signal integrity while inserting buffers, engineers maintain consistent sizing across buffer levels. However, buffer delays can differ based on the load. Delay tables, essentially 2D arrays, store values tied to input slew, load capacitance, and buffer sizes. They serve as vital timing models.
+In design, the algorithm uses these tables, computing buffer delays with input and load data. When exact data is absent, interpolation techniques estimate delays, ensuring the design meets performance criteria.
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/82b4590d-32c4-4a17-a416-aebdda9b4c86)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/6a45f2be-c941-43f5-b93a-90285aed1191)
+
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b6be5fc6-8e9c-42d1-8eed-fceff6e368d4)
 
 
 </details>
