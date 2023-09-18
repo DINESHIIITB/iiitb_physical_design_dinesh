@@ -493,9 +493,9 @@ A typical standard cell characterization flow includes the following steps:
    
 #### Standard Cell Design Flow
       Inputs:
-            Process Design Kits (PDKs)
-            Design Rule Check (DRC) & Layout vs. Schematic (LVS) rules
-            SPICE models
+            * Process Design Kits (PDKs
+            * Design Rule Check (DRC) & Layout vs. Schematic (LVS) rules.
+            * SPICE models
             Libraries
             User-defined specifications
         Design Steps:
@@ -599,96 +599,53 @@ For standard cell characterization, we recommend utilizing the open-source softw
 
 
 
-It looks like you've provided a table with timing definitions and their corresponding values. These definitions are typically used in digital circuit design and analysis. Here's a breakdown of each timing definition:
-
-    slew_low_rise_thr: This is the threshold at which the rising signal (transition from low to high) reaches 20% of its full value.
-
-    slew_high_rise_thr: This is the threshold at which the rising signal reaches 80% of its full value.
-
-    slew_low_fall_thr: This is the threshold at which the falling signal (transition from high to low) reaches 20% of its full value.
-
-    slew_high_fall_thr: This is the threshold at which the falling signal reaches 80% of its full value.
-
-    in_rise_thr: This is the threshold for the input signal during its rising transition, typically set at 50% of its full value.
-
-    in_fall_thr: This is the threshold for the input signal during its falling transition, also set at 50% of its full value.
-
-    out_rise_thr: This is the threshold for the output signal during its rising transition, again set at 50% of its full value.
-
-    out_fall_thr: This is the threshold for the output signal during its falling transition, also set at 50% of its full value.
+1. slew_low_rise_thr: This is the threshold at which the rising signal (transition from low to high) reaches 20% of its full value.
+2. slew_high_rise_thr: This is the threshold at which the rising signal reaches 80% of its full value.
+3. slew_low_fall_thr: This is the threshold at which the falling signal (transition from high to low) reaches 20% of its full value.
+4. slew_high_fall_thr: This is the threshold at which the falling signal reaches 80% of its full value.
+5. in_rise_thr: This is the threshold for the input signal during its rising transition, typically set at 50% of its full value.
+6. in_fall_thr: This is the threshold for the input signal during its falling transition, also set at 50% of its full value.
+7. out_rise_thr: This is the threshold for the output signal during its rising transition, again set at 50% of its full value.
+8. out_fall_thr: This is the threshold for the output signal during its falling transition, also set at 50% of its full value.
 
 These thresholds are crucial for timing analysis in digital circuits. They help determine when signals have transitioned to specific voltage levels, which is essential for proper circuit operation and signal integrity.
-User
 
-Propagation Delay
-
-Propagation delay refers to the time it takes for a change in an input signal to reach 50% of its final value to produce a corresponding change in the output signal to reach 50% of its final value of a digital circuit.
-
-rise delay =  time(out_fall_thr) - time(in_rise_thr)
-
-Transition time
-
-Transition time refers to the time it takes for a digital signal to change its voltage level from one logic state (e.g., logic low or 0) to another logic state (e.g., logic high or 1) or vice versa. Transition time is typically measured as the time interval between the moment when the signal voltage reaches a specific percentage (e.g., 10% to 90% or 20% to 80%) of its final value during a voltage transition and the moment when it reaches the opposite percentage during the subsequent transition.
-
-Fall transition time: time(slew_high_fall_thr) - time(slew_low_fall_thr)
-Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
-
-
-Certainly, here's a more organized and concise presentation of the concepts of propagation delay and transition time in digital circuits:
 
 Propagation Delay:
 Propagation delay is the time it takes for a change in an input signal to propagate through a digital circuit and reach 50% of its final value in the output signal. It is a critical parameter for assessing circuit performance and signal timing.
 
 Mathematically, propagation delay can be expressed as:
 
-css
-
 Propagation Delay = time(out_fall_thr) - time(in_rise_thr)
 
-    time(out_fall_thr) is the time when the output signal reaches 50% of its final value during its falling transition.
-    time(in_rise_thr) is the time when the input signal reaches 50% of its final value during its rising transition.
+* time(out_fall_thr) is the time when the output signal reaches 50% of its final value during its falling transition.
+* time(in_rise_thr) is the time when the input signal reaches 50% of its final value during its rising transition.
 
 Transition Time:
 Transition time refers to the duration it takes for a digital signal to change its voltage level from one logic state (e.g., logic low or 0) to another logic state (e.g., logic high or 1), or vice versa. Transition time is essential for assessing how quickly a signal can switch between logic states.
 
 There are two types of transition times:
 
-    Fall Transition Time:
-    Fall transition time measures the duration it takes for a signal to transition from a high voltage level to a low voltage level. It can be calculated as:
-
-    css
+1. Fall Transition Time:
+Fall transition time measures the duration it takes for a signal to transition from a high voltage level to a low voltage level. It can be calculated as:
 
 Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
 
-    time(slew_high_fall_thr) is the time when the falling signal reaches 80% of its final value.
-    time(slew_low_fall_thr) is the time when the falling signal reaches 20% of its final value.
+* time(slew_high_fall_thr) is the time when the falling signal reaches 80% of its final value.
+* time(slew_low_fall_thr) is the time when the falling signal reaches 20% of its final value.
 
-Rise Transition Time:
+2. Rise Transition Time:
 Rise transition time measures the duration it takes for a signal to transition from a low voltage level to a high voltage level. It can be calculated as:
 
-css
 
     Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
 
-        time(slew_high_rise_thr) is the time when the rising signal reaches 80% of its final value.
-        time(slew_low_rise_thr) is the time when the rising signal reaches 20% of its final value.
+* time(slew_high_rise_thr) is the time when the rising signal reaches 80% of its final value.
+* time(slew_low_rise_thr) is the time when the rising signal reaches 20% of its final value.
 
 These parameters are vital for assessing the speed and performance of digital circuits and are critical in ensuring that signals switch reliably and within specified timing constraints.
 
-In GitHub README files, you can create side headings or subsections by using one or more # symbols before your text. The number of # symbols you use determines the level of the heading. Here's how you can create side headings of different levels:
-
-# Main Heading (Level 1)
-This is your main content.
-
-## Subheading (Level 2)
-This is a subsection or side heading under the main heading.
-
-### Sub-subheading (Level 3)
-This is a further subsection or side heading under the subheading.
-
-You can create side headings by adjusting the number of # symbols. You can use up to six levels of headings in Markdown, with # being the highest level (Level 1) and ###### being the lowest level (Level 6). GitHub will automatically format these headings with appropriate styles in your README file.
-User
- 4.1 CMOS inverter ngspice simulations
+CMOS inverter ngspice simulations
 
 SPICE Deck creation and simulation for CMOS Inverter:
 
