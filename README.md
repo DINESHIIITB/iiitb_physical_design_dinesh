@@ -541,15 +541,14 @@ Standard Cell Characterization Flow
 Characterization refers to the process of gathering and analyzing electrical and performance data for a specific cell or library element. The goal of characterization is to provide accurate and comprehensive information about how the cell behaves under various operating conditions. This information is essential for designing and optimizing digital circuits using these cells.
 
 A typical standard cell characterization flow includes the following steps:
-
-    Read in the models and tech files
-    Read extracted spice netlist
-    Recognise behaviour of the cell
-    Read the subcircuits
-    Attach power sources
-    Apply stimulus to characterization setup
-    Provide necessary output capacitance loads
-    Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
+1. Read in the models and tech files
+2. Read extracted spice netlist
+3. Recognise behaviour of the cell
+4. Read the subcircuits
+5. Attach power sources
+6. Apply stimulus to characterization setup
+7. Provide necessary output capacitance loads
+     Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
 
 Standard Cell Design and Characterization
 
@@ -562,9 +561,8 @@ Standard Cell Design Flow
 The process of standard cell design unfolds as follows:
 
 Inputs:
-
-    Process Design Kits (PDKs): Essential for understanding the fabrication process.
-    Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
+    * Process Design Kits (PDKs): Essential for understanding the fabrication process.
+    * Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
     SPICE Models: Utilized for simulation and analysis.
     Libraries: Containing standard cell definitions.
     User-Defined Specifications: Tailoring the design to meet specific requirements.
@@ -599,18 +597,6 @@ Characterization is the process of comprehensively evaluating electrical and per
 
 For standard cell characterization, we recommend utilizing the open-source software, GUNA. This software streamlines the process by taking input from steps 1 to 8 and generates critical timing, noise, and power models. These models are indispensable for the precise design and optimization of digital circuits using standard cells.
 
-Feel free to use this documentation as a reference for your work in standard cell design and characterization. It provides a clear roadmap for harnessing the power of standard cells in digital circuit design.
-User
-| Timing defintion |	Value |
-| ---------------- | ----- |
-| slew_low_rise_thr |	20% value |
-| slew_high_rise_thr |	80% value |
-| slew_low_fall_thr |	20% value |
-| slew_high_fall_thr |	80% value |
-| in_rise_thr |	50% value |
-| in_fall_thr |	50% value |
-| out_rise_thr |	50% value |
-| out_fall_thr |	50% value |
 
 
 It looks like you've provided a table with timing definitions and their corresponding values. These definitions are typically used in digital circuit design and analysis. Here's a breakdown of each timing definition:
