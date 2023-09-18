@@ -498,7 +498,7 @@ A typical standard cell characterization flow includes the following steps:
     Apply stimulus to characterization setup
     Provide necessary output capacitance loads
     Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
-rewrite in goodformat for github repo
+
 
 RStandard Cell Design and Characterization Flow
 
@@ -631,7 +631,7 @@ User
 | in_fall_thr |	50% value |
 | out_rise_thr |	50% value |
 | out_fall_thr |	50% value |
-ChatGPT
+
 
 It looks like you've provided a table with timing definitions and their corresponding values. These definitions are typically used in digital circuit design and analysis. Here's a breakdown of each timing definition:
 
@@ -666,8 +666,7 @@ Transition time refers to the time it takes for a digital signal to change its v
 
 Fall transition time: time(slew_high_fall_thr) - time(slew_low_fall_thr)
 Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
-rewite 
-ChatGPT
+
 
 Certainly, here's a more organized and concise presentation of the concepts of propagation delay and transition time in digital circuits:
 
@@ -709,13 +708,8 @@ css
         time(slew_low_rise_thr) is the time when the rising signal reaches 20% of its final value.
 
 These parameters are vital for assessing the speed and performance of digital circuits and are critical in ensuring that signals switch reliably and within specified timing constraints.
-User
-side heading in github readme format
-ChatGPT
 
 In GitHub README files, you can create side headings or subsections by using one or more # symbols before your text. The number of # symbols you use determines the level of the heading. Here's how you can create side headings of different levels:
-
-markdown
 
 # Main Heading (Level 1)
 This is your main content.
@@ -740,10 +734,9 @@ Notes:
 
     Width is the length of source and drain. Length is the distance between source and drain.
     PMOS hole carrier is slower than NMOS electron carrier mobility, so to match the rise and fall time PMOS must be thicker (less resistance thus higher mobility) than NMOS.
-rewrite
-ChatGPT
 
-Section 4.1: CMOS Inverter NGSpice Simulations
+
+CMOS Inverter NGSpice Simulations
 
 In this section, we will outline the process of creating a SPICE deck and conducting simulations for a CMOS inverter using NGSpice. The CMOS inverter consists of complementary metal-oxide-semiconductor (CMOS) components, including both p-type (PMOS) and n-type (NMOS) transistors.
 
@@ -811,9 +804,6 @@ Inorder to open the mag file and run magic go to the directory
 For layout we run magic command
 
 magic -T sky130A.tech sky130_inv.mag &
-
-Ampersand at the end makes the next prompt line free, otherwise magic keeps the prompt line busy. Once we run the magic command we get the layout of the inverter in the magic window, rwrite
-ChatGPT
 
 Cloning and Running Magic for Sky130 Inverter Layout
 
