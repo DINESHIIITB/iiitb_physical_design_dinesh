@@ -473,7 +473,7 @@ Vin in 0 2.5
 
 ### Labs
 
-User
+
 Each cell that is placed on the layout is referred to as standard cell. Standard cells are pre-designed and pre-characterized logic gates, flip-flops, latches, and other digital components for which the definition is available in libraries.
 
 Standard Cell Design Flow
@@ -499,11 +499,8 @@ A typical standard cell characterization flow includes the following steps:
     Provide necessary output capacitance loads
     Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
 rewrite in goodformat for github repo
-ChatGPT
 
-Certainly! Here's a reformatted version of the information for a GitHub repository:
-
-Repository Title: Standard Cell Design and Characterization Flow
+RStandard Cell Design and Characterization Flow
 
 Description:
 This GitHub repository provides detailed documentation and resources for the standard cell design and characterization flow in digital integrated circuit design. Standard cells are pre-designed logic gates, flip-flops, latches, and other digital components crucial for modern semiconductor manufacturing. Understanding their design and characterization is fundamental to building efficient digital circuits.
@@ -548,32 +545,7 @@ Contents:
         Output:
             GUNA software generates timing, noise, and power models.
 
-Usage:
 
-    This repository serves as a comprehensive guide for anyone involved in digital integrated circuit design. It explains the standard cell design and characterization processes, making it easier to work with libraries and optimize digital circuits.
-
-Contributing:
-
-    Contributions are welcome! If you have improvements, corrections, or additional resources related to standard cell design and characterization, feel free to submit pull requests.
-
-License:
-
-    This repository is open-source and available under [LICENSE_NAME].
-
-Disclaimer:
-
-    The information in this repository is based on knowledge available up to September 2021. Ensure you have the latest resources and consult relevant documentation for the most current information.
-
-Author:
-[Your Name]
-
-Contact:
-
-    Email: [Your Email Address]
-    LinkedIn: [Your LinkedIn Profile]
-
-Feel free to customize this format to fit your GitHub repository's needs.
-User
 Each cell that is placed on the layout is referred to as standard cell. Standard cells are pre-designed and pre-characterized logic gates, flip-flops, latches, and other digital components for which the definition is available in libraries.
 
 Standard Cell Design Flow
@@ -598,8 +570,6 @@ A typical standard cell characterization flow includes the following steps:
     Apply stimulus to characterization setup
     Provide necessary output capacitance loads
     Provide necessary simulation commands the opensource software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software which generates timing, noise and power models.
-rewrite 
-ChatGPT
 
 Standard Cell Design and Characterization
 
