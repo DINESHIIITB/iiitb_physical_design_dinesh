@@ -975,6 +975,119 @@ port use ground
 
 </details>
 
+### Day 5
+
+
+<details>
+ <summary> Final Steps in RTL2GDS  </summary>
+
+ ### Maze Routing and Lee's Algorithm
+
+Routing is a crucial step in electronic design, where the goal is to establish physical connections between two pins while ensuring a valid and efficient path. Various algorithms have been developed for routing tasks, and one notable approach is the Maze Routing algorithm, which includes Lee's Algorithm.
+
+In the Maze Routing algorithm, a grid, akin to the one used during cell customization, is employed to facilitate routing. This approach begins with two key points: the source and the target. The Lee algorithm, a specific instance of Maze Routing, leverages this grid to identify the shortest and most optimal route between these two points.
+
+The algorithm operates by assigning labels to neighboring grid cells around the source, incrementing these labels progressively from 1 until it reaches the target (e.g., from 1 to 7). During this process, various paths may emerge, including L-shaped and zigzag-shaped routes. Lee's Algorithm is designed to prioritize selecting the best path, often favoring L-shaped routes over zigzags. In cases where L-shaped paths are not available, the algorithm may resort to zigzag routes. This approach proves particularly valuable for tackling global routing tasks.
+
+However, it's essential to acknowledge that the Lee algorithm has its limitations. It essentially constructs a maze and then numbers its cells from the source to the target. While effective for routing between two pins, it can become time-consuming when dealing with a large number of pins or complex layouts. In such scenarios, alternative routing algorithms designed to address similar challenges may be more efficient and practical.
+
+In summary, Maze Routing, with Lee's Algorithm as one of its representatives, is a valuable approach for solving routing problems by finding optimal paths between source and target pins. Nonetheless, it's important to consider the specific requirements and complexity of the routing task to determine the most suitable algorithm for the job.
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/f21b2b68-3bf4-4f58-9668-456dde193305)
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/1f618de9-ea81-47c6-a0c7-d09673ba5b4e)
+
+* Design Rules for Physical Wires:
+
+    * Minimum Width of the Wire: This rule specifies the smallest permissible width for a wire in the design. Ensuring that wires meet this minimum width is essential for guaranteeing signal integrity, power distribution, and manufacturability.
+
+    * Minimum Spacing Between the Wires: DRC defines the minimum separation allowed between adjacent wires. Adhering to this rule helps prevent issues like crosstalk and short circuits caused by wires being too close to each other.
+
+    * Minimum Pitch of the Wire: The pitch of a wire refers to the center-to-center spacing between identical wires in a regular pattern. DRC sets a minimum pitch requirement to optimize chip density and maintain manufacturability.
+
+* Solving Signal Short Violations:
+
+In cases where DRC identifies signal short violations, a common technique is to use additional metal layers. This involves routing wires on an upper metal layer to address the violation. Key considerations include:
+* Metal Layer Selection: Choosing the appropriate metal layer to reroute the wire to, ensuring it does not interfere with other design elements.
+
+* Via Rules: DRC also checks the design's via rules, including the via width and via spacing. Via rules govern how vias (connections between different metal layers) should be designed and placed to maintain signal integrity and avoid manufacturing issues.
+
+</details>
+
+
+<details>
+ <summary> Power Distribution Network generation </summary>
+
+In OpenLANE, the process of generating the Power Distribution Network (PDN) differs from the general ASIC (Application-Specific Integrated Circuit) design flow. Unlike the traditional flow, PDN generation is not part of the floorplan phase. Instead, it occurs after Clock Tree Synthesis (CTS) and post-CTS Static Timing Analysis (STA).
+
+To check whether the PDN has been created, you can verify the current design environment variable using the following command:
+```
+echo $::env(CURRENT_DEF)
+```
+This command will display the current design definition (DEF) file that is being used in your OpenLANE session. If a PDN has been generated for your design, it will be reflected in the DEF file.
+
+Here are the steps involved in generating the PDN in OpenLANE:
+1. Prepare the Design:
+    Use the prep command to prepare your design. In this example, the design is named "picorv32a," and a specific tag "Run 12.07.10.11" is used for version control or tracking purposes:
+
+``` 
+prep -design picorv32a -tag "Run-------"
+```
+Generate the Power Distribution Network (PDN):
+After the design is prepared, you can proceed to generate the PDN using the gen_pdn command:
+
+```
+gen_pdn
+```
+The gen_pdn command initiates the generation of the Power Distribution Network, ensuring that power is distributed efficiently and reliably throughout the chip.
+
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/519ac8f4-b4a2-447b-bd6b-184f62891d2e)
+
+Layout in magic tool post routing:
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e71b218c-a58b-4915-adbd-71961885b9bb)
+
+
+</details>
+
+
+<details>
+ <summary> Routing </summary>
+
+#### Routing Stages in Electronic Design Automation (EDA) Tools
+
+In the field of Electronic Design Automation (EDA) tools, routing processes, such as those in OpenLANE and commercial EDA tools, are highly complex due to the vast design space. To manage this complexity, the routing procedure is typically divided into two distinct stages: Global Routing and Detailed Routing. These stages are handled by specific routing engines.
+
+1. Global Routing:
+In the initial Global Routing stage, the routing region is divided into rectangular grid cells and represented as a coarse 3D routing graph. This task is efficiently executed by the "FASTE ROUTE" engine. The primary goal of Global Routing is to create a high-level routing plan for the chip.
+
+2 .Detailed Routing:
+The subsequent Detailed Routing stage involves working at a finer grid granularity and employing routing guides to implement the physical wiring. This stage is managed by the "tritonRoute" engine. While "Fast Route" generates initial routing guides, "Triton Route" refines the routing further. It utilizes the information obtained from Global Routing and applies various strategies and optimizations to find the most optimal paths for connecting the pins.
+
+Key Features of TritonRoute:
+
+1. Initiating Detailed Routing: TritonRoute serves as the starting point for the detailed routing process, laying the foundation for subsequent routing steps.
+2. Adherence to Pre-Processed Route Guides: TritonRoute places significant emphasis on following pre-processed route guides, which involves several actions:
+3. Initial Route Guide Analysis: TritonRoute carefully analyzes the directions specified in the preferred route guides. If any non-directional routing guides are identified, it breaks them down into unit widths for routing clarity.
+4. Guide Splitting: In cases where non-directional routing guides are encountered, TritonRoute divides them into unit widths to facilitate the routing process.
+5. Guide Merging: TritonRoute streamlines routing by merging guides that are orthogonal or touching the preferred guides.
+6. Guide Bridging: When TritonRoute encounters guides that run parallel to the preferred routing guides, it utilizes an additional layer to bridge them, ensuring efficient routing within the preprocessed guides.
+
+Assumption of Route Guide Compliance: TritonRoute operates on the assumption that route guides for each net satisfy inter-guide connectivity. These guides can be on the same metal layer with touching guides or neighboring metal layers with nonzero vertically overlapped areas (vias are placed accordingly). Additionally, each unconnected terminal, such as a pin of a standard cell instance, should have its pin shape overlapped by a routing guide, typically denoted as a black dot (pin) within a purple box (metal1 layer).
+
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/869cd3e1-0f33-4437-ad1e-2dd8f5f550ac)
 
 
 
+</details>
+
+
+## Word of Thanks
+I sciencerly thank **Mr. Kunal Ghosh**(Founder/**VSD**) for helping me out to complete this flow smoothly.
+
+  
+## Reference 
+- https://www.vsdiat.com
+- https://github.com/nickson-jose/vsdstdcelldesign/
+- http://opencircuitdesign.com/magic/
+- https://skywater-pdk.readthedocs.io/en/main/
