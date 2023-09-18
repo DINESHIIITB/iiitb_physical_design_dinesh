@@ -320,24 +320,24 @@ Standard Cell Design Flow
 The process of standard cell design unfolds as follows:
 
 1. Inputs:
-           * Process Design Kits (PDKs): Essential for understanding the fabrication process.
-           * Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
-           * SPICE Models: Utilized for simulation and analysis.
-           * Libraries: Containing standard cell definitions.
-           * User-Defined Specifications: Tailoring the design to meet specific requirements.
+   * Process Design Kits (PDKs): Essential for understanding the fabrication process.
+   * Design Rule Check (DRC) & Layout vs. Schematic (LVS) Rules: Ensure design compliance with manufacturing rules.
+   * SPICE Models: Utilized for simulation and analysis.
+   * Libraries: Containing standard cell definitions.
+   * User-Defined Specifications: Tailoring the design to meet specific requirements.
 
 2. Design Steps:
-          * Circuit Design: Defining the logical behavior of the standard cell.
-          * Layout Design: Crafted using techniques like Euler's path and stick diagrams.
-          * Extraction of Parasitics: Identifying and quantifying parasitic elements.
-          * Characterization: Assessing timing, noise, and power characteristics.
+   * Circuit Design: Defining the logical behavior of the standard cell.
+   * Layout Design: Crafted using techniques like Euler's path and stick diagrams.
+   * Extraction of Parasitics: Identifying and quantifying parasitic elements.
+   * Characterization: Assessing timing, noise, and power characteristics.
 
 3. Outputs:
-         * Circuit Description Language (CDL): A textual representation of the cell.
-         * Layout Exchange Format (LEF): A format for sharing layout information.
-         * GDSII: A standard file format for mask data.
-         * Extracted SPICE Netlist (.cir): A file detailing the electrical components.
-         * Timing, Noise, and Power .lib Files: Libraries with critical data for circuit optimization.
+   * Circuit Description Language (CDL): A textual representation of the cell.
+   * Layout Exchange Format (LEF): A format for sharing layout information.
+   * GDSII: A standard file format for mask data.
+   * Extracted SPICE Netlist (.cir): A file detailing the electrical components.
+   * Timing, Noise, and Power .lib Files: Libraries with critical data for circuit optimization.
 
 Standard Cell Characterization Flow
 
@@ -363,22 +363,15 @@ For standard cell characterization, we recommend utilizing the open-source softw
 <details>
  <summary> General timing characterization parameters </summary>
 
- ## Timing threshold Definitions
+ #### Timing threshold Definitions
 
   1. slew_low_rise_thr: This is the threshold at which the rising signal (transition from low to high) reaches 20% of its full value.
-  
   2. slew_high_rise_thr: This is the threshold at which the rising signal reaches 80% of its full value.
-  
   3. slew_low_fall_thr: This is the threshold at which the falling signal (transition from high to low) reaches 20% of its full value.
-  
   4. slew_high_fall_thr: This is the threshold at which the falling signal reaches 80% of its full value.
-  
   5. in_rise_thr: This is the threshold for the input signal during its rising transition, typically set at 50% of its full value.
-  
   6. in_fall_thr: This is the threshold for the input signal during its falling transition, also set at 50% of its full value.
-  
   7. out_rise_thr: This is the threshold for the output signal during its rising transition, again set at 50% of its full value.
-  
   8. out_fall_thr: This is the threshold for the output signal during its falling transition, also set at 50% of its full value.
 
 * Propagation Delay:
