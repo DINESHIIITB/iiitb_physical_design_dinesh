@@ -464,7 +464,7 @@ Vin in 0 2.5
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/4ba84476-cc3a-4d0d-b322-c7ecb3f2988d)
 
-### Labs
+#### Labs
 
 
 Each cell that is placed on the layout is referred to as standard cell. Standard cells are pre-designed and pre-characterized logic gates, flip-flops, latches, and other digital components for which the definition is available in libraries.
@@ -472,10 +472,9 @@ Each cell that is placed on the layout is referred to as standard cell. Standard
 Standard Cell Design Flow
 
 Standard cell design flow involves the following:
-
-    Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, user-defined specifications
-    Design steps: Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power)
-    Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
+* Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, user-defined specifications
+* Design steps: Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power)
+* Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
 
 Standard Cell Characterization Flow
 
@@ -732,10 +731,9 @@ Cloning and Running Magic for Sky130 Inverter Layout
 
 To work with the Sky130 inverter layout using the Magic tool, follow these steps:
 
-    Clone Required Files:
-    First, clone the required Mag (Magic layout files) and Spice Models for the inverter, PMOS, and NMOS from the GitHub repository using the following command:
+Clone Required Files:
+First, clone the required Mag (Magic layout files) and Spice Models for the inverter, PMOS, and NMOS from the GitHub repository using the following command:
 
-    bash
 
 git clone https://github.com/nickson-jose/vsdstdcelldesign.git
 
@@ -797,25 +795,41 @@ After running the above command, the Magic window should open, displaying the la
 <details>
  <summary> Timing Analysis and Clock Tree Synthesis (CTS)  </summary>
 
+#### Standard Cell LEF generation
+
+To create a custom standard cell, you should adhere to the following guidelines:
+1. Ensure that the input and output ports are positioned at the intersection of horizontal and vertical tracks.
+2. Make sure that the width and height of the standard cell are both odd multiples of the horizontal track pitch and vertical track pitch.
+
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/e25b1545-0113-4651-be74-0a154c579424)
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/9f7389dd-70c6-40f1-b786-62df9debf0e8)
 
+
+To define a port for a standard cell in the Magic layout tool, you can follow these steps:
+1. In the Magic Layout window, start by sourcing the .mag file for your design, such as an inverter.
+2. Go to the "Edit" menu and select "Text." This action will open a dialogue box for text editing.
+3. When you double-click the 'S' key at the I/O labels on the layout, the text will automatically adopt the string name and size of the label.
+4. Make sure to check the "Port enable" checkbox, and ensure that the "Default" checkbox is unchecked, as shown in the figure.
+
+These steps will help you define a port for your macro cell when working with LEF files in Magic.
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/2e5795dd-04a9-481c-9772-c5c6ac04b437)
 
-Select port A in magic:
+
+Setting  port class and port use attributes for layout:
+* Select port A in magic:
 port class input
 port use signal
 
-Select Y area
+* Select Y area
 port class output
 port use signal
 
-Select VPWR area
+* Select VPWR area
 port class inout
 port use power
 
-Select VGND area
+* Select VGND area
 port class inout
 port use ground
 
@@ -824,13 +838,29 @@ port use ground
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/898022f9-729d-4569-8ab8-7fa144438783)
 
-
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/c0dc2345-b727-4464-9b39-71f1f39a0727)
+
+
+Lef Extraction: 
+1. Using the Tkcon window, assign the name "sky130_vsdinv.mag" to your custom cell.
+2. To generate the LEF file, execute the command: "lef write."
+3. This action will result in the creation of the "sky130_vsdinv.lef" file.
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/755710e1-ada3-4cfc-bc6e-1c3c7d8c2278)
 
-
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/266a05fe-9030-42fe-b380-639918a8e85d)
+
+
+#### To include a custom standard cell in an ASIC design, you can follow these steps:
+
+1. Create the Custom Standard Cell:
+        Design your custom standard cell, such as an inverter, using a layout editor like Magic or your preferred ASIC design tool.
+2. Copy Library Files:
+        Locate the necessary library files (LEF and LIB files) related to your custom cell and the standard cell library. In your case, you mentioned these files: "sky130_fd_sc_hd_typical.lib," "sky130_fd_sc_hd_slow.lib," and "sky130_fd_sc_hd_fast.lib."
+3. Copy these library files along with your custom cell LEF file to a suitable directory, typically referred to as your ASIC design project's "src" folder.
+4. Modify config.tcl:
+         Open the "config.tcl" file in your ASIC design project.
+Add or modify the library definitions to include the paths to your custom cell library files and your custom cell's LEF file. 
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/cacc2630-8790-41da-9f1f-dad5de2e9be1)
 
