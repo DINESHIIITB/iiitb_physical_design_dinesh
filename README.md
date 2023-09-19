@@ -888,9 +888,8 @@ In design, the algorithm uses these tables, computing buffer delays with input a
 
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/6a45f2be-c941-43f5-b93a-90285aed1191)
 
+![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/28947eb3-2ae0-4378-bcdd-9012bac46860)
 
-
-![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/b6be5fc6-8e9c-42d1-8eed-fceff6e368d4)
 
 
 </details>
@@ -902,7 +901,7 @@ In design, the algorithm uses these tables, computing buffer delays with input a
 ![image](https://github.com/DINESHIIITB/iiitb_physical_design_dinesh/assets/140998565/8a0f7584-469a-428d-94cc-b30472213f7c)
 
 
-ChatGPT
+
 
 The setup timing analysis equation can be expressed as:
 
